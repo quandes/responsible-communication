@@ -1,6 +1,0 @@
-interface:
-  display_name: "Responsible Communication (Deutsch)"
-  short_description: "Kommunikation reflektieren, Urteilskraft erhalten"
-  default_prompt: "Nutze $responsible-communication-de für den ausdrücklich beauftragten Text."
-policy:
-  allow_implicit_invocation: false

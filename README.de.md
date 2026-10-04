@@ -10,7 +10,7 @@ Text ein Risiko, oder erzeugt er vor allem Druck?
 Der Skill entscheidet nicht für dich. Er legt seine Kriterien offen, ändert nichts heimlich,
 und du kannst jedem Hinweis widersprechen. Deutliche Kritik darf deutlich bleiben.
 
-> **Status: 0.2.0, Pilot.** Der Skill wird gerade an echten Entwürfen erprobt. Die
+> **Status: 0.3.0, Pilot.** Der Skill wird gerade an echten Entwürfen erprobt. Die
 > Testfälle in diesem Repository beschreiben erwartetes Verhalten; unabhängig über
 > mehrere Modelle ausgeführt wurden sie noch nicht. Rückmeldungen zu Fehlalarmen und
 > übersehenen Problemen sind sehr willkommen.
@@ -28,8 +28,8 @@ Kriterien: Entwürdigung, ungerechtfertigte Verallgemeinerung, unbelegte Tatsach
 irreführende Dringlichkeit oder Bedrohung, Druck durch Schuld oder moralische
 Zugehörigkeit, wesentliche Auslassungen, Privatsphäre und erfundene Authentizität,
 behauptete Freigaben oder Verfügbarkeit. Siehe
-[`criteria.md`](skills/responsible-communication-de/references/criteria.md) und die
-[offengelegten Prinzipien](skills/responsible-communication-de/references/principles.md).
+[`criteria.md`](skills/responsible-communication/references/criteria.md) und die
+[offengelegten Prinzipien (englisch)](skills/responsible-communication/references/principles.md).
 
 ## Beispiel
 
@@ -42,32 +42,27 @@ sie relevant ist?“*
 
 ## Sprachen
 
-Der Skill liegt in zwei eigenständigen Fassungen vor. Installiere **eine** davon:
-
-| Ordner | Skill-Name | Sprache der Anweisungen |
-|---|---|---|
-| [`skills/responsible-communication`](skills/responsible-communication) | `responsible-communication` | Englisch (maßgeblich) |
-| [`skills/responsible-communication-de`](skills/responsible-communication-de) | `responsible-communication-de` | deutsche Übersetzung |
-
-Beide Fassungen prüfen Entwürfe in jeder Sprache und schreiben den Bericht in der Sprache
-deiner Anfrage. Maßgeblich ist die englische Fassung; bei Abweichungen gilt sie.
+Die Anweisungen des Skills gibt es nur auf Englisch, damit nur eine Fassung gepflegt
+werden muss. Der Skill prüft Entwürfe in jeder Sprache, zitiert Fundstellen in der Sprache
+des Entwurfs und schreibt den Bericht in der Sprache deiner Anfrage, also auch auf
+Deutsch. Kriterien und Prinzipien sind im Skill-Ordner auf Englisch dokumentiert.
 
 ## Installation
 
-Repository klonen und den gewünschten Skill-Ordner in das Skill-Verzeichnis deines Agenten kopieren.
+Repository klonen und den Skill-Ordner in das Skill-Verzeichnis deines Agenten kopieren.
 
 ```bash
 git clone https://github.com/quandes/responsible-communication.git
 
 # Claude Code (persönlich) – oder .claude/skills/ innerhalb eines Projekts
-cp -r responsible-communication/skills/responsible-communication-de ~/.claude/skills/
+cp -r responsible-communication/skills/responsible-communication ~/.claude/skills/
 
 # Codex und andere Agent-Skills-Hosts – auf Projektebene
-cp -r responsible-communication/skills/responsible-communication-de .agents/skills/
+cp -r responsible-communication/skills/responsible-communication .agents/skills/
 ```
 
 Danach den Agenten ausdrücklich beauftragen, zum Beispiel:
-*„Prüfe diesen Entwurf mit responsible-communication-de im Modus reflect. Verändere ihn nicht.“*
+*„Prüfe diesen Entwurf mit responsible-communication im Modus reflect. Verändere ihn nicht. Antworte auf Deutsch.“*
 
 Der Skill folgt der [Agent-Skills-Spezifikation](https://agentskills.io/specification).
 Für Codex ist der automatische Aufruf abgeschaltet (`agents/openai.yaml`), denn die Prüfung
@@ -90,7 +85,7 @@ Bitte ein Issue mit einem **anonymisierten Minimalbeispiel** anlegen: Modell,
 Skill-Version, erwartetes Verhalten und tatsächliche Ausgabe. Keine privaten Entwürfe oder
 persönlichen Details einfügen. Anpassungen sind willkommen; eigene Regeln bitte als solche
 kennzeichnen (siehe
-[Prinzipien](skills/responsible-communication-de/references/principles.md#anpassungen)).
+[Prinzipien, Abschnitt „Adaptations“](skills/responsible-communication/references/principles.md#adaptations)).
 Ein Fork ist keine Billigung durch die ursprünglichen Autoren.
 
 ## Hintergrund

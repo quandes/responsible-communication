@@ -10,9 +10,8 @@ description: >-
   audience manipulation or publishing.
 license: MIT
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   language: "en"
-  translation: "responsible-communication-de"
 ---
 
 # Responsible Communication

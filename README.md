@@ -10,7 +10,7 @@ a risk, or does it mainly create pressure?
 The skill does not decide for you. It discloses its criteria, changes nothing behind your
 back, and you can disagree with any of its hints. Sharp criticism may stay sharp.
 
-> **Status: 0.2.0, pilot.** The skill is being tested on real drafts. The test cases in
+> **Status: 0.3.0, pilot.** The skill is being tested on real drafts. The test cases in
 > this repository describe expected behavior; they have not been independently run
 > across models yet. Feedback on false alarms and missed issues is very welcome.
 
@@ -40,19 +40,14 @@ to them?"*
 
 ## Languages
 
-The skill is available in two self-contained variants. Install **one** of them:
-
-| Folder | Skill name | Language of instructions |
-|---|---|---|
-| [`skills/responsible-communication`](skills/responsible-communication) | `responsible-communication` | English (canonical) |
-| [`skills/responsible-communication-de`](skills/responsible-communication-de) | `responsible-communication-de` | German translation |
-
-Both variants review drafts in any language and write the report in the language of
-your request. The English version is canonical; if the two differ, it takes precedence.
+The skill instructions are in English only, so there is one version to maintain. The
+skill reviews drafts in any language, quotes passages in the draft's language and writes
+the report in the language of your request, for example German. A German README is
+available: [README.de.md](README.de.md).
 
 ## Installation
 
-Clone the repository and copy the skill folder you want into your agent's skills directory.
+Clone the repository and copy the skill folder into your agent's skills directory.
 
 ```bash
 git clone https://github.com/quandes/responsible-communication.git
