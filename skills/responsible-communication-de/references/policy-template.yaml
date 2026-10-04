@@ -1,0 +1,16 @@
+# Experimentell: Der guardrail-Modus ist in Version 0.2 nicht aktiv.
+policy_id: communication-policy-example
+version: 0.1.0
+status: draft_not_approved
+owner: null
+opt_in_confirmed: false
+rules:
+  - id: SOURCE-01
+    description: "Konkrete Zahlen mit einer passenden Quelle belegen."
+    action: human_review
+  - id: PRIVACY-01
+    description: "Identifizierbare Geschichten nur nach konkreter Freigabe verwenden."
+    action: human_review
+publication:
+  automatic_approval: false
+  external_enforcement_required: true

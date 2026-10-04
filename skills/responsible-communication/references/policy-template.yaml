@@ -1,0 +1,16 @@
+# Experimental: guardrail mode is not active in version 0.2.
+policy_id: communication-policy-example
+version: 0.1.0
+status: draft_not_approved
+owner: null
+opt_in_confirmed: false
+rules:
+  - id: SOURCE-01
+    description: "Support specific numbers with a matching source."
+    action: human_review
+  - id: PRIVACY-01
+    description: "Use identifiable stories only after specific approval."
+    action: human_review
+publication:
+  automatic_approval: false
+  external_enforcement_required: true
